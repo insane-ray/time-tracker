@@ -13,11 +13,11 @@ services:
       timetracker:
         ipv4_address: 172.10.1.1
 
-  back:
-    container_name: timetracker-back
-    build: ./time-tracker-back
+  api:
+    container_name: timetracker-api
+    build: ./time-tracker-api
     volumes:
-      - './time-tracker-back:/usr/src/app'
+      - './time-tracker-api:/usr/src/app'
     ports:
       - '3000:3000'
     command: >
